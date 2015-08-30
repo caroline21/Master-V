@@ -1,0 +1,474 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="Entities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="tblAlimentos" EntityType="Model.tblAlimentos" />
+    <EntitySet Name="tblComprobación" EntityType="Model.tblComprobación" />
+    <EntitySet Name="tblComprobacionGastos" EntityType="Model.tblComprobacionGastos" />
+    <EntitySet Name="tblConceptosDesc" EntityType="Model.tblConceptosDesc" />
+    <EntitySet Name="tblEmpleado" EntityType="Model.tblEmpleado" />
+    <EntitySet Name="tblGastosSinComprobar" EntityType="Model.tblGastosSinComprobar" />
+    <EntitySet Name="tblHospedaje" EntityType="Model.tblHospedaje" />
+    <EntitySet Name="tblOtrosGastos" EntityType="Model.tblOtrosGastos" />
+    <EntitySet Name="tblPersonasAsignadas" EntityType="Model.tblPersonasAsignadas" />
+    <EntitySet Name="tblProyecto" EntityType="Model.tblProyecto" />
+    <EntitySet Name="tblRelacionGastos" EntityType="Model.tblRelacionGastos" />
+    <EntitySet Name="tblSolicitudV" EntityType="Model.tblSolicitudV" />
+    <EntitySet Name="tblTotalDiario" EntityType="Model.tblTotalDiario" />
+    <EntitySet Name="tblTotalGastos" EntityType="Model.tblTotalGastos" />
+    <EntitySet Name="tblTransporte" EntityType="Model.tblTransporte" />
+    <AssociationSet Name="FK_tblAlimentos_tblSolicitudV" Association="Model.FK_tblAlimentos_tblSolicitudV">
+      <End Role="tblSolicitudV" EntitySet="tblSolicitudV" />
+      <End Role="tblAlimentos" EntitySet="tblAlimentos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblComprobación_tblSolicitudV" Association="Model.FK_tblComprobación_tblSolicitudV">
+      <End Role="tblSolicitudV" EntitySet="tblSolicitudV" />
+      <End Role="tblComprobación" EntitySet="tblComprobación" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblComprobacionGastos_tblComprobación" Association="Model.FK_tblComprobacionGastos_tblComprobación">
+      <End Role="tblComprobación" EntitySet="tblComprobación" />
+      <End Role="tblComprobacionGastos" EntitySet="tblComprobacionGastos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblGastosSinComprobar_tblComprobación" Association="Model.FK_tblGastosSinComprobar_tblComprobación">
+      <End Role="tblComprobación" EntitySet="tblComprobación" />
+      <End Role="tblGastosSinComprobar" EntitySet="tblGastosSinComprobar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblTotalDiario_tblComprobación" Association="Model.FK_tblTotalDiario_tblComprobación">
+      <End Role="tblComprobación" EntitySet="tblComprobación" />
+      <End Role="tblTotalDiario" EntitySet="tblTotalDiario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblTotalGastos_tblComprobación" Association="Model.FK_tblTotalGastos_tblComprobación">
+      <End Role="tblComprobación" EntitySet="tblComprobación" />
+      <End Role="tblTotalGastos" EntitySet="tblTotalGastos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblSolicitudV_tblEmpleado" Association="Model.FK_tblSolicitudV_tblEmpleado">
+      <End Role="tblEmpleado" EntitySet="tblEmpleado" />
+      <End Role="tblSolicitudV" EntitySet="tblSolicitudV" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblGastosSinComprobar_tblProyecto" Association="Model.FK_tblGastosSinComprobar_tblProyecto">
+      <End Role="tblProyecto" EntitySet="tblProyecto" />
+      <End Role="tblGastosSinComprobar" EntitySet="tblGastosSinComprobar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblRelacionGastos_tblGastosSinComprobar" Association="Model.FK_tblRelacionGastos_tblGastosSinComprobar">
+      <End Role="tblGastosSinComprobar" EntitySet="tblGastosSinComprobar" />
+      <End Role="tblRelacionGastos" EntitySet="tblRelacionGastos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblHospedaje_tblSolicitudV" Association="Model.FK_tblHospedaje_tblSolicitudV">
+      <End Role="tblSolicitudV" EntitySet="tblSolicitudV" />
+      <End Role="tblHospedaje" EntitySet="tblHospedaje" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblOtrosGastos_tblSolicitudV" Association="Model.FK_tblOtrosGastos_tblSolicitudV">
+      <End Role="tblSolicitudV" EntitySet="tblSolicitudV" />
+      <End Role="tblOtrosGastos" EntitySet="tblOtrosGastos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblPersonasAsignadas_tblProyecto" Association="Model.FK_tblPersonasAsignadas_tblProyecto">
+      <End Role="tblProyecto" EntitySet="tblProyecto" />
+      <End Role="tblPersonasAsignadas" EntitySet="tblPersonasAsignadas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblSolicitudV_tblProyecto" Association="Model.FK_tblSolicitudV_tblProyecto">
+      <End Role="tblProyecto" EntitySet="tblProyecto" />
+      <End Role="tblSolicitudV" EntitySet="tblSolicitudV" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblTransporte_tblSolicitudV" Association="Model.FK_tblTransporte_tblSolicitudV">
+      <End Role="tblSolicitudV" EntitySet="tblSolicitudV" />
+      <End Role="tblTransporte" EntitySet="tblTransporte" />
+    </AssociationSet>
+    <AssociationSet Name="tblPersonasSolicitud" Association="Model.tblPersonasSolicitud">
+      <End Role="tblPersonasAsignadas" EntitySet="tblPersonasAsignadas" />
+      <End Role="tblSolicitudV" EntitySet="tblSolicitudV" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="tblAlimentos">
+    <Key>
+      <PropertyRef Name="IdSolicitud" />
+      <PropertyRef Name="cantidad" />
+      <PropertyRef Name="concepto" />
+      <PropertyRef Name="total" />
+      <PropertyRef Name="numComida" />
+    </Key>
+    <Property Name="IdSolicitud" Type="Int32" Nullable="false" />
+    <Property Name="cantidad" Type="Double" Nullable="false" />
+    <Property Name="concepto" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="total" Type="Double" Nullable="false" />
+    <Property Name="numComida" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tblSolicitudV" Relationship="Model.FK_tblAlimentos_tblSolicitudV" FromRole="tblAlimentos" ToRole="tblSolicitudV" />
+  </EntityType>
+  <EntityType Name="tblComprobación">
+    <Key>
+      <PropertyRef Name="Idcomprobacion" />
+    </Key>
+    <Property Name="Idcomprobacion" Type="Int32" Nullable="false" />
+    <Property Name="IdSolicitud" Type="Int32" Nullable="false" />
+    <Property Name="IdProyecto" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="IdEmpleado" Type="Int32" Nullable="false" />
+    <Property Name="fecha" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="gerenteAdmin" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="jefeInmediato" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="areaContable" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="tblSolicitudV" Relationship="Model.FK_tblComprobación_tblSolicitudV" FromRole="tblComprobación" ToRole="tblSolicitudV" />
+    <NavigationProperty Name="tblComprobacionGastos" Relationship="Model.FK_tblComprobacionGastos_tblComprobación" FromRole="tblComprobación" ToRole="tblComprobacionGastos" />
+    <NavigationProperty Name="tblGastosSinComprobar" Relationship="Model.FK_tblGastosSinComprobar_tblComprobación" FromRole="tblComprobación" ToRole="tblGastosSinComprobar" />
+    <NavigationProperty Name="tblTotalDiario" Relationship="Model.FK_tblTotalDiario_tblComprobación" FromRole="tblComprobación" ToRole="tblTotalDiario" />
+    <NavigationProperty Name="tblTotalGastos" Relationship="Model.FK_tblTotalGastos_tblComprobación" FromRole="tblComprobación" ToRole="tblTotalGastos" />
+  </EntityType>
+  <EntityType Name="tblComprobacionGastos">
+    <Key>
+      <PropertyRef Name="IdComprobacion" />
+      <PropertyRef Name="fecha" />
+    </Key>
+    <Property Name="IdComprobacion" Type="Int32" Nullable="false" />
+    <Property Name="fecha" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="tarifa" Type="Double" />
+    <Property Name="hospedaje" Type="Double" />
+    <Property Name="alimentacion" Type="Double" />
+    <Property Name="gasolina" Type="Double" />
+    <Property Name="taxi" Type="Double" />
+    <Property Name="caseta" Type="Double" />
+    <Property Name="tel" Type="Double" />
+    <Property Name="estacionamiento" Type="Double" />
+    <Property Name="internet" Type="Double" />
+    <Property Name="paquetEnvio" Type="Double" />
+    <Property Name="comidaNeg" Type="Double" />
+    <Property Name="otros" Type="Double" />
+    <NavigationProperty Name="tblComprobación" Relationship="Model.FK_tblComprobacionGastos_tblComprobación" FromRole="tblComprobacionGastos" ToRole="tblComprobación" />
+  </EntityType>
+  <EntityType Name="tblConceptosDesc">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="descripcion" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="descripcion" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tblEmpleado">
+    <Key>
+      <PropertyRef Name="IdEmpleado" />
+    </Key>
+    <Property Name="IdEmpleado" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="foto" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="usuario" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="tblSolicitudV" Relationship="Model.FK_tblSolicitudV_tblEmpleado" FromRole="tblEmpleado" ToRole="tblSolicitudV" />
+  </EntityType>
+  <EntityType Name="tblGastosSinComprobar">
+    <Key>
+      <PropertyRef Name="IdGastosSinComprobar" />
+    </Key>
+    <Property Name="IdGastosSinComprobar" Type="Int32" Nullable="false" />
+    <Property Name="IdComprobacion" Type="Int32" Nullable="false" />
+    <Property Name="IdProyecto" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="fecha" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="cantidad" Type="Double" Nullable="false" />
+    <Property Name="cantidadLetra" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="destino" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="fechaComision" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="jefeInmediato" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="admonFinanzas" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="tipoComprobacion" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="tblComprobación" Relationship="Model.FK_tblGastosSinComprobar_tblComprobación" FromRole="tblGastosSinComprobar" ToRole="tblComprobación" />
+    <NavigationProperty Name="tblProyecto" Relationship="Model.FK_tblGastosSinComprobar_tblProyecto" FromRole="tblGastosSinComprobar" ToRole="tblProyecto" />
+    <NavigationProperty Name="tblRelacionGastos" Relationship="Model.FK_tblRelacionGastos_tblGastosSinComprobar" FromRole="tblGastosSinComprobar" ToRole="tblRelacionGastos" />
+  </EntityType>
+  <EntityType Name="tblHospedaje">
+    <Key>
+      <PropertyRef Name="IdSolicitud" />
+      <PropertyRef Name="concepto" />
+      <PropertyRef Name="total" />
+      <PropertyRef Name="numNoches" />
+    </Key>
+    <Property Name="IdSolicitud" Type="Int32" Nullable="false" />
+    <Property Name="concepto" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="total" Type="Double" Nullable="false" />
+    <Property Name="numNoches" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tblSolicitudV" Relationship="Model.FK_tblHospedaje_tblSolicitudV" FromRole="tblHospedaje" ToRole="tblSolicitudV" />
+  </EntityType>
+  <EntityType Name="tblOtrosGastos">
+    <Key>
+      <PropertyRef Name="IdSolicitud" />
+      <PropertyRef Name="concepto" />
+      <PropertyRef Name="numFrecuencia" />
+      <PropertyRef Name="total" />
+    </Key>
+    <Property Name="IdSolicitud" Type="Int32" Nullable="false" />
+    <Property Name="concepto" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="numFrecuencia" Type="Int32" Nullable="false" />
+    <Property Name="total" Type="Double" Nullable="false" />
+    <NavigationProperty Name="tblSolicitudV" Relationship="Model.FK_tblOtrosGastos_tblSolicitudV" FromRole="tblOtrosGastos" ToRole="tblSolicitudV" />
+  </EntityType>
+  <EntityType Name="tblPersonasAsignadas">
+    <Key>
+      <PropertyRef Name="IdPersonas" />
+    </Key>
+    <Property Name="IdProyecto" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="IdPersonas" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tblProyecto" Relationship="Model.FK_tblPersonasAsignadas_tblProyecto" FromRole="tblPersonasAsignadas" ToRole="tblProyecto" />
+    <NavigationProperty Name="tblSolicitudV" Relationship="Model.tblPersonasSolicitud" FromRole="tblPersonasAsignadas" ToRole="tblSolicitudV" />
+  </EntityType>
+  <EntityType Name="tblProyecto">
+    <Key>
+      <PropertyRef Name="IdProyecto" />
+    </Key>
+    <Property Name="IdProyecto" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="nombre" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="montoDesayuno" Type="Double" />
+    <Property Name="montoComida" Type="Double" />
+    <Property Name="montoCena" Type="Double" />
+    <Property Name="nombreGerente" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="nombreJefe" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="nombreConta" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="tblGastosSinComprobar" Relationship="Model.FK_tblGastosSinComprobar_tblProyecto" FromRole="tblProyecto" ToRole="tblGastosSinComprobar" />
+    <NavigationProperty Name="tblPersonasAsignadas" Relationship="Model.FK_tblPersonasAsignadas_tblProyecto" FromRole="tblProyecto" ToRole="tblPersonasAsignadas" />
+    <NavigationProperty Name="tblSolicitudV" Relationship="Model.FK_tblSolicitudV_tblProyecto" FromRole="tblProyecto" ToRole="tblSolicitudV" />
+  </EntityType>
+  <EntityType Name="tblRelacionGastos">
+    <Key>
+      <PropertyRef Name="IdGastosSinComprobar" />
+      <PropertyRef Name="fecha" />
+      <PropertyRef Name="concepto" />
+      <PropertyRef Name="importe" />
+    </Key>
+    <Property Name="IdGastosSinComprobar" Type="Int32" Nullable="false" />
+    <Property Name="fecha" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="concepto" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="importe" Type="Double" Nullable="false" />
+    <NavigationProperty Name="tblGastosSinComprobar" Relationship="Model.FK_tblRelacionGastos_tblGastosSinComprobar" FromRole="tblRelacionGastos" ToRole="tblGastosSinComprobar" />
+  </EntityType>
+  <EntityType Name="tblSolicitudV">
+    <Key>
+      <PropertyRef Name="IdSolicitud" />
+    </Key>
+    <Property Name="IdSolicitud" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="IdEmpleado" Type="Int32" Nullable="false" />
+    <Property Name="IdProyecto" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="fechaSolicitud" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="destino" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="fechaSalida" Type="DateTime" Precision="3" />
+    <Property Name="fechaRegreso" Type="DateTime" Precision="3" />
+    <Property Name="horaSalida" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="horaRegreso" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="monto" Type="Double" Nullable="false" />
+    <Property Name="numCuenta" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="cantLetra" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="totalDias" Type="Int32" Nullable="false" />
+    <Property Name="totalGasto" Type="Double" Nullable="false" />
+    <NavigationProperty Name="tblAlimentos" Relationship="Model.FK_tblAlimentos_tblSolicitudV" FromRole="tblSolicitudV" ToRole="tblAlimentos" />
+    <NavigationProperty Name="tblComprobación" Relationship="Model.FK_tblComprobación_tblSolicitudV" FromRole="tblSolicitudV" ToRole="tblComprobación" />
+    <NavigationProperty Name="tblEmpleado" Relationship="Model.FK_tblSolicitudV_tblEmpleado" FromRole="tblSolicitudV" ToRole="tblEmpleado" />
+    <NavigationProperty Name="tblHospedaje" Relationship="Model.FK_tblHospedaje_tblSolicitudV" FromRole="tblSolicitudV" ToRole="tblHospedaje" />
+    <NavigationProperty Name="tblOtrosGastos" Relationship="Model.FK_tblOtrosGastos_tblSolicitudV" FromRole="tblSolicitudV" ToRole="tblOtrosGastos" />
+    <NavigationProperty Name="tblProyecto" Relationship="Model.FK_tblSolicitudV_tblProyecto" FromRole="tblSolicitudV" ToRole="tblProyecto" />
+    <NavigationProperty Name="tblTransporte" Relationship="Model.FK_tblTransporte_tblSolicitudV" FromRole="tblSolicitudV" ToRole="tblTransporte" />
+    <NavigationProperty Name="tblPersonasAsignadas" Relationship="Model.tblPersonasSolicitud" FromRole="tblSolicitudV" ToRole="tblPersonasAsignadas" />
+  </EntityType>
+  <EntityType Name="tblTotalDiario">
+    <Key>
+      <PropertyRef Name="IdComprobacion" />
+      <PropertyRef Name="fecha" />
+    </Key>
+    <Property Name="IdComprobacion" Type="Int32" Nullable="false" />
+    <Property Name="fecha" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="concepto" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="totalConceptoGen" Type="Double" />
+    <NavigationProperty Name="tblComprobación" Relationship="Model.FK_tblTotalDiario_tblComprobación" FromRole="tblTotalDiario" ToRole="tblComprobación" />
+  </EntityType>
+  <EntityType Name="tblTotalGastos">
+    <Key>
+      <PropertyRef Name="IdComprabacion" />
+      <PropertyRef Name="fecha" />
+      <PropertyRef Name="totalViaje" />
+      <PropertyRef Name="saldo" />
+    </Key>
+    <Property Name="IdComprabacion" Type="Int32" Nullable="false" />
+    <Property Name="boletos" Type="Double" />
+    <Property Name="otrosGastos" Type="Double" />
+    <Property Name="fecha" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="totalViaje" Type="Double" Nullable="false" />
+    <Property Name="totalSinComprobar" Type="Double" />
+    <Property Name="saldo" Type="Double" Nullable="false" />
+    <NavigationProperty Name="tblComprobación" Relationship="Model.FK_tblTotalGastos_tblComprobación" FromRole="tblTotalGastos" ToRole="tblComprobación" />
+  </EntityType>
+  <EntityType Name="tblTransporte">
+    <Key>
+      <PropertyRef Name="IdSolicitud" />
+      <PropertyRef Name="conceptoo" />
+      <PropertyRef Name="total" />
+      <PropertyRef Name="numTransporte" />
+    </Key>
+    <Property Name="IdSolicitud" Type="Int32" Nullable="false" />
+    <Property Name="conceptoo" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="total" Type="Double" Nullable="false" />
+    <Property Name="numTransporte" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tblSolicitudV" Relationship="Model.FK_tblTransporte_tblSolicitudV" FromRole="tblTransporte" ToRole="tblSolicitudV" />
+  </EntityType>
+  <Association Name="FK_tblAlimentos_tblSolicitudV">
+    <End Role="tblSolicitudV" Type="Model.tblSolicitudV" Multiplicity="1" />
+    <End Role="tblAlimentos" Type="Model.tblAlimentos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblSolicitudV">
+        <PropertyRef Name="IdSolicitud" />
+      </Principal>
+      <Dependent Role="tblAlimentos">
+        <PropertyRef Name="IdSolicitud" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblComprobación_tblSolicitudV">
+    <End Role="tblSolicitudV" Type="Model.tblSolicitudV" Multiplicity="1" />
+    <End Role="tblComprobación" Type="Model.tblComprobación" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblSolicitudV">
+        <PropertyRef Name="IdSolicitud" />
+      </Principal>
+      <Dependent Role="tblComprobación">
+        <PropertyRef Name="IdSolicitud" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblComprobacionGastos_tblComprobación">
+    <End Role="tblComprobación" Type="Model.tblComprobación" Multiplicity="1" />
+    <End Role="tblComprobacionGastos" Type="Model.tblComprobacionGastos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblComprobación">
+        <PropertyRef Name="Idcomprobacion" />
+      </Principal>
+      <Dependent Role="tblComprobacionGastos">
+        <PropertyRef Name="IdComprobacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblGastosSinComprobar_tblComprobación">
+    <End Role="tblComprobación" Type="Model.tblComprobación" Multiplicity="1" />
+    <End Role="tblGastosSinComprobar" Type="Model.tblGastosSinComprobar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblComprobación">
+        <PropertyRef Name="Idcomprobacion" />
+      </Principal>
+      <Dependent Role="tblGastosSinComprobar">
+        <PropertyRef Name="IdComprobacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblTotalDiario_tblComprobación">
+    <End Role="tblComprobación" Type="Model.tblComprobación" Multiplicity="1" />
+    <End Role="tblTotalDiario" Type="Model.tblTotalDiario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblComprobación">
+        <PropertyRef Name="Idcomprobacion" />
+      </Principal>
+      <Dependent Role="tblTotalDiario">
+        <PropertyRef Name="IdComprobacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblTotalGastos_tblComprobación">
+    <End Role="tblComprobación" Type="Model.tblComprobación" Multiplicity="1" />
+    <End Role="tblTotalGastos" Type="Model.tblTotalGastos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblComprobación">
+        <PropertyRef Name="Idcomprobacion" />
+      </Principal>
+      <Dependent Role="tblTotalGastos">
+        <PropertyRef Name="IdComprabacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblSolicitudV_tblEmpleado">
+    <End Role="tblEmpleado" Type="Model.tblEmpleado" Multiplicity="1" />
+    <End Role="tblSolicitudV" Type="Model.tblSolicitudV" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblEmpleado">
+        <PropertyRef Name="IdEmpleado" />
+      </Principal>
+      <Dependent Role="tblSolicitudV">
+        <PropertyRef Name="IdEmpleado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblGastosSinComprobar_tblProyecto">
+    <End Role="tblProyecto" Type="Model.tblProyecto" Multiplicity="1" />
+    <End Role="tblGastosSinComprobar" Type="Model.tblGastosSinComprobar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblProyecto">
+        <PropertyRef Name="IdProyecto" />
+      </Principal>
+      <Dependent Role="tblGastosSinComprobar">
+        <PropertyRef Name="IdProyecto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblRelacionGastos_tblGastosSinComprobar">
+    <End Role="tblGastosSinComprobar" Type="Model.tblGastosSinComprobar" Multiplicity="1" />
+    <End Role="tblRelacionGastos" Type="Model.tblRelacionGastos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblGastosSinComprobar">
+        <PropertyRef Name="IdGastosSinComprobar" />
+      </Principal>
+      <Dependent Role="tblRelacionGastos">
+        <PropertyRef Name="IdGastosSinComprobar" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblHospedaje_tblSolicitudV">
+    <End Role="tblSolicitudV" Type="Model.tblSolicitudV" Multiplicity="1" />
+    <End Role="tblHospedaje" Type="Model.tblHospedaje" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblSolicitudV">
+        <PropertyRef Name="IdSolicitud" />
+      </Principal>
+      <Dependent Role="tblHospedaje">
+        <PropertyRef Name="IdSolicitud" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblOtrosGastos_tblSolicitudV">
+    <End Role="tblSolicitudV" Type="Model.tblSolicitudV" Multiplicity="1" />
+    <End Role="tblOtrosGastos" Type="Model.tblOtrosGastos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblSolicitudV">
+        <PropertyRef Name="IdSolicitud" />
+      </Principal>
+      <Dependent Role="tblOtrosGastos">
+        <PropertyRef Name="IdSolicitud" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblPersonasAsignadas_tblProyecto">
+    <End Role="tblProyecto" Type="Model.tblProyecto" Multiplicity="1" />
+    <End Role="tblPersonasAsignadas" Type="Model.tblPersonasAsignadas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblProyecto">
+        <PropertyRef Name="IdProyecto" />
+      </Principal>
+      <Dependent Role="tblPersonasAsignadas">
+        <PropertyRef Name="IdProyecto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblSolicitudV_tblProyecto">
+    <End Role="tblProyecto" Type="Model.tblProyecto" Multiplicity="1" />
+    <End Role="tblSolicitudV" Type="Model.tblSolicitudV" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblProyecto">
+        <PropertyRef Name="IdProyecto" />
+      </Principal>
+      <Dependent Role="tblSolicitudV">
+        <PropertyRef Name="IdProyecto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblTransporte_tblSolicitudV">
+    <End Role="tblSolicitudV" Type="Model.tblSolicitudV" Multiplicity="1" />
+    <End Role="tblTransporte" Type="Model.tblTransporte" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblSolicitudV">
+        <PropertyRef Name="IdSolicitud" />
+      </Principal>
+      <Dependent Role="tblTransporte">
+        <PropertyRef Name="IdSolicitud" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tblPersonasSolicitud">
+    <End Role="tblPersonasAsignadas" Type="Model.tblPersonasAsignadas" Multiplicity="*" />
+    <End Role="tblSolicitudV" Type="Model.tblSolicitudV" Multiplicity="*" />
+  </Association>
+</Schema>
