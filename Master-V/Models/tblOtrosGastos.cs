@@ -19,6 +19,13 @@ namespace Master_V.Models
         public int numFrecuencia { get; set; }
         public double total { get; set; }
     
-        public virtual tblSolicitudV tblSolicitudV { get; set; }
+        public  tblSolicitudV tblSolicitudV { get; set; }
+    }
+    public class OtrosGastosDTO
+    {
+        public int IdSolicitud { get; set; }
+        public string concepto { get; set; }
+        public int numFrecuencia { get; set; }
+        public double total { get; set; }
     }
 }

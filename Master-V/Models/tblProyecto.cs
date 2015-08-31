@@ -16,9 +16,9 @@ namespace Master_V.Models
     {
         public tblProyecto()
         {
-            this.tblGastosSinComprobar = new HashSet<tblGastosSinComprobar>();
-            this.tblPersonasAsignadas = new HashSet<tblPersonasAsignadas>();
-            this.tblSolicitudV = new HashSet<tblSolicitudV>();
+            this.tblGastosSinComprobar = new tblGastosSinComprobar();
+            this.tblPersonasAsignadas = new tblPersonasAsignadas();
+            this.tblSolicitudV = new tblSolicitudV();
         }
     
         public string IdProyecto { get; set; }
@@ -30,8 +30,24 @@ namespace Master_V.Models
         public string nombreJefe { get; set; }
         public string nombreConta { get; set; }
     
-        public virtual ICollection<tblGastosSinComprobar> tblGastosSinComprobar { get; set; }
-        public virtual ICollection<tblPersonasAsignadas> tblPersonasAsignadas { get; set; }
-        public virtual ICollection<tblSolicitudV> tblSolicitudV { get; set; }
+        public tblGastosSinComprobar tblGastosSinComprobar { get; set; }
+        public tblPersonasAsignadas tblPersonasAsignadas { get; set; }
+        public tblSolicitudV tblSolicitudV { get; set; }
+    }
+
+    public class ProyectoDTO
+    {
+        public string nombre { get; set; }
+        public Nullable<double> montoDesayuno { get; set; }
+        public Nullable<double> montoComida { get; set; }
+        public Nullable<double> montoCena { get; set; }
+        public string nombreGerente { get; set; }
+        public string nombreJefe { get; set; }
+        public string nombreConta { get; set; }
+
+        public IEnumerable<tblGastosSinComprobar> tblGastosSinComprobar { get; set; }
+        public IEnumerable<tblPersonasAsignadas> tblPersonasAsignadas { get; set; }
+        public IEnumerable<tblSolicitudV> tblSolicitudV { get; set; }
+ 
     }
 }

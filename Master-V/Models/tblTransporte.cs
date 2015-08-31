@@ -19,6 +19,14 @@ namespace Master_V.Models
         public double total { get; set; }
         public int numTransporte { get; set; }
     
-        public virtual tblSolicitudV tblSolicitudV { get; set; }
+        public tblSolicitudV tblSolicitudV { get; set; }
+    }
+
+    public class TransporteDTO
+    {
+        public int IdSolicitud { get; set; }
+        public string conceptoo { get; set; }
+        public double total { get; set; }
+        public int numTransporte { get; set; }
     }
 }

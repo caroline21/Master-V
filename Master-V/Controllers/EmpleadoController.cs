@@ -98,16 +98,18 @@ namespace Master_V.Controllers
         [ResponseType(typeof(tblEmpleado))]
         public IHttpActionResult DeletetblEmpleado(int id)
         {
-            tblEmpleado tblempleado = db.tblEmpleado.Find(id);
-            if (tblempleado == null)
+            var  emp = db.tblEmpleado.Find(id);
+            var empleado = AutoMapper.Mapper.Map<tblEmpleado>(emp);
+
+            if (empleado == null)
             {
                 return NotFound();
             }
 
-            db.tblEmpleado.Remove(tblempleado);
+            db.tblEmpleado.Remove(empleado);
             db.SaveChanges();
 
-            return Ok(tblempleado);
+            return Ok(emp);
         }
 
         protected override void Dispose(bool disposing)

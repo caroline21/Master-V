@@ -16,10 +16,10 @@ namespace Master_V.Models
     {
         public tblComprobación()
         {
-            this.tblComprobacionGastos = new HashSet<tblComprobacionGastos>();
-            this.tblGastosSinComprobar = new HashSet<tblGastosSinComprobar>();
-            this.tblTotalDiario = new HashSet<tblTotalDiario>();
-            this.tblTotalGastos = new HashSet<tblTotalGastos>();
+            this.tblComprobacionGastos = new tblComprobacionGastos();
+            this.tblGastosSinComprobar = new tblGastosSinComprobar();
+            this.tblTotalDiario = new tblTotalDiario();
+            this.tblTotalGastos = new tblTotalGastos();
         }
     
         public int Idcomprobacion { get; set; }
@@ -31,10 +31,26 @@ namespace Master_V.Models
         public string jefeInmediato { get; set; }
         public string areaContable { get; set; }
     
-        public virtual tblSolicitudV tblSolicitudV { get; set; }
-        public virtual ICollection<tblComprobacionGastos> tblComprobacionGastos { get; set; }
-        public virtual ICollection<tblGastosSinComprobar> tblGastosSinComprobar { get; set; }
-        public virtual ICollection<tblTotalDiario> tblTotalDiario { get; set; }
-        public virtual ICollection<tblTotalGastos> tblTotalGastos { get; set; }
+        public tblSolicitudV tblSolicitudV { get; set; }
+        public tblComprobacionGastos tblComprobacionGastos { get; set; }
+        public tblGastosSinComprobar tblGastosSinComprobar { get; set; }
+        public tblTotalDiario tblTotalDiario { get; set; }
+        public tblTotalGastos tblTotalGastos { get; set; }
+    }
+    public class ComprobacionDTO
+    {
+        public int IdSolicitud { get; set; }
+        public string IdProyecto { get; set; }
+        public int IdEmpleado { get; set; }
+        public System.DateTime fecha { get; set; }
+        public string gerenteAdmin { get; set; }
+        public string jefeInmediato { get; set; }
+        public string areaContable { get; set; }
+
+        public int  tblSolicitudV { get; set; }
+        public IEnumerable<tblComprobacionGastos> tblComprobacionGastos { get; set; }
+        public IEnumerable<tblGastosSinComprobar> tblGastosSinComprobar { get; set; }
+        public IEnumerable<tblTotalDiario> tblTotalDiario { get; set; }
+        public IEnumerable<tblTotalGastos> tblTotalGastos { get; set; }
     }
 }

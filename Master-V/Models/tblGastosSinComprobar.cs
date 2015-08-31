@@ -16,7 +16,7 @@ namespace Master_V.Models
     {
         public tblGastosSinComprobar()
         {
-            this.tblRelacionGastos = new HashSet<tblRelacionGastos>();
+            this.tblRelacionGastos = new tblRelacionGastos();
         }
     
         public int IdGastosSinComprobar { get; set; }
@@ -31,8 +31,26 @@ namespace Master_V.Models
         public string admonFinanzas { get; set; }
         public string tipoComprobacion { get; set; }
     
-        public virtual tblComprobación tblComprobación { get; set; }
-        public virtual tblProyecto tblProyecto { get; set; }
-        public virtual ICollection<tblRelacionGastos> tblRelacionGastos { get; set; }
+        public  tblComprobación tblComprobación { get; set; }
+        public  tblProyecto tblProyecto { get; set; }
+        public  tblRelacionGastos tblRelacionGastos { get; set; }
+    }
+    public class GastosSinComprobarDTO
+    {
+        public int IdComprobacion { get; set; }
+        public string IdProyecto { get; set; }
+        public System.DateTime fecha { get; set; }
+        public double cantidad { get; set; }
+        public string cantidadLetra { get; set; }
+        public string destino { get; set; }
+        public System.DateTime fechaComision { get; set; }
+        public string jefeInmediato { get; set; }
+        public string admonFinanzas { get; set; }
+        public string tipoComprobacion { get; set; }
+
+        public int tblComprobación { get; set; }
+        public int tblProyecto { get; set; }
+        public IEnumerable<tblRelacionGastos> tblRelacionGasto { get; set; }
+ 
     }
 }
