@@ -22,17 +22,6 @@ namespace Master_V.Models
         public Nullable<double> totalSinComprobar { get; set; }
         public double saldo { get; set; }
     
-        public tblComprobación tblComprobación { get; set; }
-    }
-
-    public class TotalGastosDTO
-    {
-        public int IdComprabacion { get; set; }
-        public Nullable<double> boletos { get; set; }
-        public Nullable<double> otrosGastos { get; set; }
-        public System.DateTime fecha { get; set; }
-        public double totalViaje { get; set; }
-        public Nullable<double> totalSinComprobar { get; set; }
-        public double saldo { get; set; }
+        public virtual tblComprobacion tblComprobacion { get; set; }
     }
 }

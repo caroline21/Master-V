@@ -12,13 +12,12 @@ namespace Master_V.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class tblRelacionGastos
+    public partial class sysdiagrams
     {
-        public int IdGastosSinComprobar { get; set; }
-        public System.DateTime fecha { get; set; }
-        public string concepto { get; set; }
-        public double importe { get; set; }
-    
-        public virtual tblGastosSinComprobar tblGastosSinComprobar { get; set; }
+        public string name { get; set; }
+        public int principal_id { get; set; }
+        public int diagram_id { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }

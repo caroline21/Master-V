@@ -20,14 +20,6 @@ namespace Master_V.Models
         public double total { get; set; }
         public int numComida { get; set; }
     
-        public  tblSolicitudV tblSolicitudV { get; set; }
-    }
-    public class AlimentosDTO
-    {
-        public int IdSolicitud { get; set; }
-        public double cantidad { get; set; }
-        public string concepto { get; set; }
-        public double total { get; set; }
-        public int numComida { get; set; }
+        public virtual tblSolicitudV tblSolicitudV { get; set; }
     }
 }

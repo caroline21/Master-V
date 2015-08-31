@@ -19,13 +19,6 @@ namespace Master_V.Models
         public string concepto { get; set; }
         public Nullable<double> totalConceptoGen { get; set; }
     
-        public tblComprobación tblComprobación { get; set; }
-    }
-    public class TotalDiarioDTO
-    {
-        public int IdComprobacion { get; set; }
-        public System.DateTime fecha { get; set; }
-        public string concepto { get; set; }
-        public Nullable<double> totalConceptoGen { get; set; }
+        public virtual tblComprobacion tblComprobacion { get; set; }
     }
 }

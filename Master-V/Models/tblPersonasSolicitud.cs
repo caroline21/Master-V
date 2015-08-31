@@ -12,13 +12,13 @@ namespace Master_V.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class tblRelacionGastos
+    public partial class tblPersonasSolicitud
     {
-        public int IdGastosSinComprobar { get; set; }
-        public System.DateTime fecha { get; set; }
-        public string concepto { get; set; }
-        public double importe { get; set; }
+        public int IdSolicitud { get; set; }
+        public int IdPersona { get; set; }
+        public int IdRelacion { get; set; }
     
-        public virtual tblGastosSinComprobar tblGastosSinComprobar { get; set; }
+        public virtual tblPersonasAsignadas tblPersonasAsignadas { get; set; }
+        public virtual tblSolicitudV tblSolicitudV { get; set; }
     }
 }

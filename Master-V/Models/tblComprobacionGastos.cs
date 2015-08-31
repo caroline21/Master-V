@@ -29,23 +29,6 @@ namespace Master_V.Models
         public Nullable<double> comidaNeg { get; set; }
         public Nullable<double> otros { get; set; }
     
-        public tblComprobación tblComprobación { get; set; }
-    }
-    public class ComprobacionGastosDTO
-    {
-        public int IdComprobacion { get; set; }
-        public System.DateTime fecha { get; set; }
-        public Nullable<double> tarifa { get; set; }
-        public Nullable<double> hospedaje { get; set; }
-        public Nullable<double> alimentacion { get; set; }
-        public Nullable<double> gasolina { get; set; }
-        public Nullable<double> taxi { get; set; }
-        public Nullable<double> caseta { get; set; }
-        public Nullable<double> tel { get; set; }
-        public Nullable<double> estacionamiento { get; set; }
-        public Nullable<double> internet { get; set; }
-        public Nullable<double> paquetEnvio { get; set; }
-        public Nullable<double> comidaNeg { get; set; }
-        public Nullable<double> otros { get; set; }
+        public virtual tblComprobacion tblComprobacion { get; set; }
     }
 }

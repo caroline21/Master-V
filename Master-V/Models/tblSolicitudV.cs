@@ -16,12 +16,12 @@ namespace Master_V.Models
     {
         public tblSolicitudV()
         {
-            this.tblAlimentos = new tblAlimentos();
-            this.tblComprobación = new tblComprobación();
-            this.tblHospedaje = new tblHospedaje();
-            this.tblOtrosGastos = new tblOtrosGastos();
-            this.tblTransporte = new tblTransporte();
-            this.tblPersonasAsignadas = new tblPersonasAsignadas();
+            this.tblComprobacion = new HashSet<tblComprobacion>();
+            this.tblPersonasSolicitud = new HashSet<tblPersonasSolicitud>();
+            this.tblAlimentos = new HashSet<tblAlimentos>();
+            this.tblHospedaje = new HashSet<tblHospedaje>();
+            this.tblOtrosGastos = new HashSet<tblOtrosGastos>();
+            this.tblTransporte = new HashSet<tblTransporte>();
         }
     
         public int IdSolicitud { get; set; }
@@ -39,39 +39,12 @@ namespace Master_V.Models
         public int totalDias { get; set; }
         public double totalGasto { get; set; }
     
-        public tblAlimentos tblAlimentos { get; set; }
-        public tblComprobación tblComprobación { get; set; }
-        public tblEmpleado tblEmpleado { get; set; }
-        public tblHospedaje tblHospedaje { get; set; }
-        public tblOtrosGastos tblOtrosGastos { get; set; }
-        public tblProyecto tblProyecto { get; set; }
-        public tblTransporte tblTransporte { get; set; }
-
-        public tblPersonasAsignadas tblPersonasAsignadas { get; set; }
-    }
-    public class SolicitudVDTO
-    {
-        public int IdEmpleado { get; set; }
-        public string IdProyecto { get; set; }
-        public System.DateTime fechaSolicitud { get; set; }
-        public string destino { get; set; }
-        public Nullable<System.DateTime> fechaSalida { get; set; }
-        public Nullable<System.DateTime> fechaRegreso { get; set; }
-        public string horaSalida { get; set; }
-        public string horaRegreso { get; set; }
-        public double monto { get; set; }
-        public string numCuenta { get; set; }
-        public string cantLetra { get; set; }
-        public int totalDias { get; set; }
-        public double totalGasto { get; set; }
-
-        public IEnumerable<tblAlimentos> tblAlimentos { get; set; }
-        public IEnumerable<tblComprobación> tblComprobación { get; set; }
-        public IEnumerable<tblEmpleado> tblEmpleado { get;set; }
-        public IEnumerable<tblHospedaje> tblHospedaje { get; set; }
-        public IEnumerable<tblOtrosGastos> tblOtrosGastos { get; set; }
-        public tblProyecto tblProyecto { get; set; }
-        public IEnumerable<tblTransporte> tblTransporte { get; set; }
-
+        public virtual ICollection<tblComprobacion> tblComprobacion { get; set; }
+        public virtual tblEmpleado tblEmpleado { get; set; }
+        public virtual ICollection<tblPersonasSolicitud> tblPersonasSolicitud { get; set; }
+        public virtual ICollection<tblAlimentos> tblAlimentos { get; set; }
+        public virtual ICollection<tblHospedaje> tblHospedaje { get; set; }
+        public virtual ICollection<tblOtrosGastos> tblOtrosGastos { get; set; }
+        public virtual ICollection<tblTransporte> tblTransporte { get; set; }
     }
 }

@@ -19,14 +19,6 @@ namespace Master_V.Models
         public double total { get; set; }
         public int numNoches { get; set; }
     
-        public  tblSolicitudV tblSolicitudV { get; set; }
-    }
-    public class HospedajeDTO
-    {
-        public int IdSolicitud { get; set; }
-        public string concepto { get; set; }
-        public double total { get; set; }
-        public int numNoches { get; set; }
- 
+        public virtual tblSolicitudV tblSolicitudV { get; set; }
     }
 }

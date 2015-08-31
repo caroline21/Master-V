@@ -16,7 +16,7 @@ namespace Master_V.Models
     {
         public tblEmpleado()
         {
-            this.tblSolicitudV = new tblSolicitudV();
+            this.tblSolicitudV = new HashSet<tblSolicitudV>();
         }
     
         public int IdEmpleado { get; set; }
@@ -24,13 +24,6 @@ namespace Master_V.Models
         public string foto { get; set; }
         public string usuario { get; set; }
     
-        public tblSolicitudV tblSolicitudV { get; set; }
-    }
-
-    public class EmpleadoDTO 
-    {
-        public string nombre { get; set; }
-        public string foto { get; set; }
-       // public string usuario { get; set; }
+        public virtual ICollection<tblSolicitudV> tblSolicitudV { get; set; }
     }
 }

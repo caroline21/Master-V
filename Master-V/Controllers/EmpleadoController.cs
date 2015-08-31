@@ -20,6 +20,7 @@ namespace Master_V.Controllers
         public IEnumerable<EmpleadoDTO> GettblEmpleado()
         {
             var emp = from a in db.tblEmpleado select a;
+
             var empleado = AutoMapper.Mapper.Map<IEnumerable<EmpleadoDTO>>(emp);
 
             return empleado;

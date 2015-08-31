@@ -12,13 +12,8 @@ namespace Master_V.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class tblRelacionGastos
+    public partial class PersonasSolicitud
     {
-        public int IdGastosSinComprobar { get; set; }
-        public System.DateTime fecha { get; set; }
-        public string concepto { get; set; }
-        public double importe { get; set; }
-    
-        public virtual tblGastosSinComprobar tblGastosSinComprobar { get; set; }
+        public int Id { get; set; }
     }
 }

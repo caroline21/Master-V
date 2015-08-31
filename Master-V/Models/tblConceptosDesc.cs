@@ -17,9 +17,4 @@ namespace Master_V.Models
         public int Id { get; set; }
         public string descripcion { get; set; }
     }
-    public class ConceptosDescDTO
-    {
-        public int Id { get; set; }
-        public string descripcion { get; set; }
-    }
 }

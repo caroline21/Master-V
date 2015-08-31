@@ -16,22 +16,13 @@ namespace Master_V.Models
     {
         public tblPersonasAsignadas()
         {
-            this.tblSolicitudV = new tblSolicitudV();
+            this.tblPersonasSolicitud = new HashSet<tblPersonasSolicitud>();
         }
     
-        public string IdProyecto { get; set; }
+        public int IdProyecto { get; set; }
         public int IdPersonas { get; set; }
     
-        public  tblProyecto tblProyecto { get; set; }
-        public tblSolicitudV tblSolicitudV { get; set; }
+        public virtual tblProyecto tblProyecto { get; set; }
+        public virtual ICollection<tblPersonasSolicitud> tblPersonasSolicitud { get; set; }
     }
-    public class PersonasAsignadas
-    {
-        public string IdProyecto { get; set; }
-        
-        public int  tblProyecto { get; set;}
-        public IEnumerable<tblSolicitudV> tblSolicitudV { get; set; }
-
-    }
-
 }

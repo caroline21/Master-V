@@ -36,7 +36,7 @@ namespace Master_V.Controllers
         }
 
         // PUT api/Proyecto/5
-        public IHttpActionResult PuttblProyecto(string id, tblProyecto tblproyecto)
+        public IHttpActionResult PuttblProyecto(int id, tblProyecto tblproyecto)
         {
             if (!ModelState.IsValid)
             {
@@ -124,7 +124,7 @@ namespace Master_V.Controllers
             base.Dispose(disposing);
         }
 
-        private bool tblProyectoExists(string id)
+        private bool tblProyectoExists(int id)
         {
             return db.tblProyecto.Count(e => e.IdProyecto == id) > 0;
         }

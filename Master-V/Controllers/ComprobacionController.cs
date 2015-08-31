@@ -9,6 +9,7 @@ using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
 using Master_V.Models;
+using System.Threading.Tasks;
 
 namespace Master_V.Controllers
 {
@@ -17,26 +18,58 @@ namespace Master_V.Controllers
         private Entities db = new Entities();
 
         // GET api/Comprobacion
-        public IQueryable<tblComprobación> GettblComprobación()
+        public IEnumerable<ComprobacionesDTO> GettblComprobacion()
         {
-            return db.tblComprobación;
+            // Se obtienen las comprobaciones de la tabla.
+            var comprobaciones = from c in db.tblComprobacion select c;
+
+            // Se mapea ComprobacionesDTO con tblComprobación.
+            var comprobacionesDTO = AutoMapper.Mapper.Map <IEnumerable<ComprobacionesDTO>>(comprobaciones);
+
+            // Se regresa la información.
+            return comprobacionesDTO;
         }
 
         // GET api/Comprobacion/5
-        [ResponseType(typeof(tblComprobación))]
-        public IHttpActionResult GettblComprobación(int id)
+        [ResponseType(typeof(ComprobacionDTO))]
+        public IHttpActionResult GetComprobación(int idComp)
         {
-            tblComprobación tblcomprobación = db.tblComprobación.Find(id);
-            if (tblcomprobación == null)
+            var compDTO = new ComprobacionDTO();
+
+            if (db.tblComprobacion.Find(idComp) != null)
+            {
+                var compGastot    = from cg  in db.tblComprobacionGastos where cg.IdComprobacion  == idComp select cg;
+                var gastosSinComp = from gsc in db.tblGastosSinComprobar where gsc.IdComprobacion == idComp select gsc;
+                var totDiarios    = from td  in db.tblTotalDiario        where td.IdComprobacion  == idComp select td;
+                var totGastos     = from tg  in db.tblTotalGastos        where tg.IdComprabacion  == idComp select tg;
+                var comprobacion  = from c in db.tblComprobacion
+                                   select new ComprobacionDTO
+                                   {
+                                       IdSolicitud = c.Idcomprobacion,
+                                       IdProyecto = c.IdProyecto,
+                                       IdEmpleado = c.IdEmpleado,
+                                       fecha = c.fecha,
+                                       gerenteAdmin = c.gerenteAdmin,
+                                       jefeInmediato = c.jefeInmediato,
+                                       areaContable = c.areaContable,
+                                       tblComprobacionGastos = compGastot,
+                                       tblGastosSinComprobar = gastosSinComp,
+                                       tblTotalDiario = totDiarios,
+                                       tblTotalGastos = totGastos
+                                   };
+
+                compDTO = AutoMapper.Mapper.Map<ComprobacionDTO>(comprobacion);
+            }
+            else
             {
                 return NotFound();
             }
 
-            return Ok(tblcomprobación);
+            return Ok(compDTO);
         }
 
         // PUT api/Comprobacion/5
-        public IHttpActionResult PuttblComprobación(int id, tblComprobación tblcomprobación)
+        public IHttpActionResult PuttblComprobación(int id, tblComprobacion tblcomprobación)
         {
             if (!ModelState.IsValid)
             {
@@ -70,15 +103,15 @@ namespace Master_V.Controllers
         }
 
         // POST api/Comprobacion
-        [ResponseType(typeof(tblComprobación))]
-        public IHttpActionResult PosttblComprobación(tblComprobación tblcomprobación)
+        [ResponseType(typeof(tblComprobacion))]
+        public IHttpActionResult PosttblComprobación(tblComprobacion tblcomprobación)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            db.tblComprobación.Add(tblcomprobación);
+            db.tblComprobacion.Add(tblcomprobación);
 
             try
             {
@@ -100,16 +133,16 @@ namespace Master_V.Controllers
         }
 
         // DELETE api/Comprobacion/5
-        [ResponseType(typeof(tblComprobación))]
+        [ResponseType(typeof(tblComprobacion))]
         public IHttpActionResult DeletetblComprobación(int id)
         {
-            tblComprobación tblcomprobación = db.tblComprobación.Find(id);
+            tblComprobacion tblcomprobación = db.tblComprobacion.Find(id);
             if (tblcomprobación == null)
             {
                 return NotFound();
             }
 
-            db.tblComprobación.Remove(tblcomprobación);
+            db.tblComprobacion.Remove(tblcomprobación);
             db.SaveChanges();
 
             return Ok(tblcomprobación);
@@ -126,7 +159,7 @@ namespace Master_V.Controllers
 
         private bool tblComprobaciónExists(int id)
         {
-            return db.tblComprobación.Count(e => e.Idcomprobacion == id) > 0;
+            return db.tblComprobacion.Count(e => e.Idcomprobacion == id) > 0;
         }
     }
 }

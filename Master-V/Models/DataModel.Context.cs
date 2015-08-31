@@ -25,18 +25,20 @@ namespace Master_V.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public DbSet<tblAlimentos> tblAlimentos { get; set; }
-        public DbSet<tblComprobación> tblComprobación { get; set; }
-        public DbSet<tblComprobacionGastos> tblComprobacionGastos { get; set; }
-        public DbSet<tblConceptosDesc> tblConceptosDesc { get; set; }
+        public DbSet<sysdiagrams> sysdiagrams { get; set; }
+        public DbSet<tblComprobacion> tblComprobacion { get; set; }
         public DbSet<tblEmpleado> tblEmpleado { get; set; }
         public DbSet<tblGastosSinComprobar> tblGastosSinComprobar { get; set; }
+        public DbSet<tblPersonasAsignadas> tblPersonasAsignadas { get; set; }
+        public DbSet<tblPersonasSolicitud> tblPersonasSolicitud { get; set; }
+        public DbSet<tblProyecto> tblProyecto { get; set; }
+        public DbSet<tblSolicitudV> tblSolicitudV { get; set; }
+        public DbSet<tblAlimentos> tblAlimentos { get; set; }
+        public DbSet<tblComprobacionGastos> tblComprobacionGastos { get; set; }
+        public DbSet<tblConceptosDesc> tblConceptosDesc { get; set; }
         public DbSet<tblHospedaje> tblHospedaje { get; set; }
         public DbSet<tblOtrosGastos> tblOtrosGastos { get; set; }
-        public DbSet<tblPersonasAsignadas> tblPersonasAsignadas { get; set; }
-        public DbSet<tblProyecto> tblProyecto { get; set; }
         public DbSet<tblRelacionGastos> tblRelacionGastos { get; set; }
-        public DbSet<tblSolicitudV> tblSolicitudV { get; set; }
         public DbSet<tblTotalDiario> tblTotalDiario { get; set; }
         public DbSet<tblTotalGastos> tblTotalGastos { get; set; }
         public DbSet<tblTransporte> tblTransporte { get; set; }
