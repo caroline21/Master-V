@@ -31,6 +31,6 @@ namespace Master_V.Models
     {
         public string nombre { get; set; }
         public string foto { get; set; }
-        public string usuario { get; set; }
+       // public string usuario { get; set; }
     }
 }
