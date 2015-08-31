@@ -65,3 +65,39 @@ C:\Users\crobles\Source\Repos\Master-V\Master-V\bin\Antlr3.Runtime.pdb
 C:\Users\crobles\Source\Repos\Master-V\Master-V\obj\Debug\Master-V.csprojResolveAssemblyReference.cache
 C:\Users\crobles\Source\Repos\Master-V\Master-V\obj\Debug\Master-V.dll
 C:\Users\crobles\Source\Repos\Master-V\Master-V\obj\Debug\Master-V.pdb
+C:\Users\Carolina\Documents\Visual Studio 2013\Projects\Master-V\Master-V\Master-V\bin\Master-V.dll.config
+C:\Users\Carolina\Documents\Visual Studio 2013\Projects\Master-V\Master-V\Master-V\bin\Master-V.dll
+C:\Users\Carolina\Documents\Visual Studio 2013\Projects\Master-V\Master-V\Master-V\bin\Master-V.pdb
+C:\Users\Carolina\Documents\Visual Studio 2013\Projects\Master-V\Master-V\Master-V\bin\Antlr3.Runtime.dll
+C:\Users\Carolina\Documents\Visual Studio 2013\Projects\Master-V\Master-V\Master-V\bin\AutoMapper.dll
+C:\Users\Carolina\Documents\Visual Studio 2013\Projects\Master-V\Master-V\Master-V\bin\EntityFramework.dll
+C:\Users\Carolina\Documents\Visual Studio 2013\Projects\Master-V\Master-V\Master-V\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Carolina\Documents\Visual Studio 2013\Projects\Master-V\Master-V\Master-V\bin\Newtonsoft.Json.dll
+C:\Users\Carolina\Documents\Visual Studio 2013\Projects\Master-V\Master-V\Master-V\bin\System.Net.Http.Formatting.dll
+C:\Users\Carolina\Documents\Visual Studio 2013\Projects\Master-V\Master-V\Master-V\bin\System.Web.Helpers.dll
+C:\Users\Carolina\Documents\Visual Studio 2013\Projects\Master-V\Master-V\Master-V\bin\System.Web.Http.dll
+C:\Users\Carolina\Documents\Visual Studio 2013\Projects\Master-V\Master-V\Master-V\bin\System.Web.Http.WebHost.dll
+C:\Users\Carolina\Documents\Visual Studio 2013\Projects\Master-V\Master-V\Master-V\bin\System.Web.Mvc.dll
+C:\Users\Carolina\Documents\Visual Studio 2013\Projects\Master-V\Master-V\Master-V\bin\System.Web.Optimization.dll
+C:\Users\Carolina\Documents\Visual Studio 2013\Projects\Master-V\Master-V\Master-V\bin\System.Web.Razor.dll
+C:\Users\Carolina\Documents\Visual Studio 2013\Projects\Master-V\Master-V\Master-V\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Carolina\Documents\Visual Studio 2013\Projects\Master-V\Master-V\Master-V\bin\System.Web.WebPages.dll
+C:\Users\Carolina\Documents\Visual Studio 2013\Projects\Master-V\Master-V\Master-V\bin\System.Web.WebPages.Razor.dll
+C:\Users\Carolina\Documents\Visual Studio 2013\Projects\Master-V\Master-V\Master-V\bin\WebGrease.dll
+C:\Users\Carolina\Documents\Visual Studio 2013\Projects\Master-V\Master-V\Master-V\bin\AutoMapper.xml
+C:\Users\Carolina\Documents\Visual Studio 2013\Projects\Master-V\Master-V\Master-V\bin\EntityFramework.xml
+C:\Users\Carolina\Documents\Visual Studio 2013\Projects\Master-V\Master-V\Master-V\bin\Newtonsoft.Json.xml
+C:\Users\Carolina\Documents\Visual Studio 2013\Projects\Master-V\Master-V\Master-V\bin\System.Net.Http.Formatting.xml
+C:\Users\Carolina\Documents\Visual Studio 2013\Projects\Master-V\Master-V\Master-V\bin\System.Web.Helpers.xml
+C:\Users\Carolina\Documents\Visual Studio 2013\Projects\Master-V\Master-V\Master-V\bin\System.Web.Http.xml
+C:\Users\Carolina\Documents\Visual Studio 2013\Projects\Master-V\Master-V\Master-V\bin\System.Web.Http.WebHost.xml
+C:\Users\Carolina\Documents\Visual Studio 2013\Projects\Master-V\Master-V\Master-V\bin\System.Web.Mvc.xml
+C:\Users\Carolina\Documents\Visual Studio 2013\Projects\Master-V\Master-V\Master-V\bin\System.Web.Optimization.xml
+C:\Users\Carolina\Documents\Visual Studio 2013\Projects\Master-V\Master-V\Master-V\bin\System.Web.Razor.xml
+C:\Users\Carolina\Documents\Visual Studio 2013\Projects\Master-V\Master-V\Master-V\bin\System.Web.WebPages.xml
+C:\Users\Carolina\Documents\Visual Studio 2013\Projects\Master-V\Master-V\Master-V\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Carolina\Documents\Visual Studio 2013\Projects\Master-V\Master-V\Master-V\bin\System.Web.WebPages.Razor.xml
+C:\Users\Carolina\Documents\Visual Studio 2013\Projects\Master-V\Master-V\Master-V\bin\Antlr3.Runtime.pdb
+C:\Users\Carolina\Documents\Visual Studio 2013\Projects\Master-V\Master-V\Master-V\obj\Debug\Master-V.csprojResolveAssemblyReference.cache
+C:\Users\Carolina\Documents\Visual Studio 2013\Projects\Master-V\Master-V\Master-V\obj\Debug\Master-V.dll
+C:\Users\Carolina\Documents\Visual Studio 2013\Projects\Master-V\Master-V\Master-V\obj\Debug\Master-V.pdb

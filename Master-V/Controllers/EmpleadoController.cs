@@ -32,6 +32,7 @@ namespace Master_V.Controllers
         {
             var emp = db.tblEmpleado.Find(id);
             var empleado = AutoMapper.Mapper.Map<EmpleadoDTO>(emp);
+
             if (empleado == null)
             {
                 return NotFound();
