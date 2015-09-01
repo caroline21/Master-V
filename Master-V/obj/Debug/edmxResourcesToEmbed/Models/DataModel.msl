@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="Model.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblComprobacion">
+      <EntityTypeMapping TypeName="Model.tblComprobacion">
+        <MappingFragment StoreEntitySet="tblComprobacion">
+          <ScalarProperty Name="Idcomprobacion" ColumnName="Idcomprobacion" />
+          <ScalarProperty Name="IdSolicitud" ColumnName="IdSolicitud" />
+          <ScalarProperty Name="IdProyecto" ColumnName="IdProyecto" />
+          <ScalarProperty Name="IdEmpleado" ColumnName="IdEmpleado" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="gerenteAdmin" ColumnName="gerenteAdmin" />
+          <ScalarProperty Name="jefeInmediato" ColumnName="jefeInmediato" />
+          <ScalarProperty Name="areaContable" ColumnName="areaContable" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblEmpleado">
+      <EntityTypeMapping TypeName="Model.tblEmpleado">
+        <MappingFragment StoreEntitySet="tblEmpleado">
+          <ScalarProperty Name="IdEmpleado" ColumnName="IdEmpleado" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="foto" ColumnName="foto" />
+          <ScalarProperty Name="usuario" ColumnName="usuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblGastosSinComprobar">
+      <EntityTypeMapping TypeName="Model.tblGastosSinComprobar">
+        <MappingFragment StoreEntitySet="tblGastosSinComprobar">
+          <ScalarProperty Name="IdGastosSinComprobar" ColumnName="IdGastosSinComprobar" />
+          <ScalarProperty Name="IdComprobacion" ColumnName="IdComprobacion" />
+          <ScalarProperty Name="IdProyecto" ColumnName="IdProyecto" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+          <ScalarProperty Name="cantidadLetra" ColumnName="cantidadLetra" />
+          <ScalarProperty Name="destino" ColumnName="destino" />
+          <ScalarProperty Name="fechaComision" ColumnName="fechaComision" />
+          <ScalarProperty Name="jefeInmediato" ColumnName="jefeInmediato" />
+          <ScalarProperty Name="admonFinanzas" ColumnName="admonFinanzas" />
+          <ScalarProperty Name="tipoComprobacion" ColumnName="tipoComprobacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblPersonasAsignadas">
+      <EntityTypeMapping TypeName="Model.tblPersonasAsignadas">
+        <MappingFragment StoreEntitySet="tblPersonasAsignadas">
+          <ScalarProperty Name="IdProyecto" ColumnName="IdProyecto" />
+          <ScalarProperty Name="IdPersonas" ColumnName="IdPersonas" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblPersonasSolicitud">
+      <EntityTypeMapping TypeName="Model.tblPersonasSolicitud">
+        <MappingFragment StoreEntitySet="tblPersonasSolicitud">
+          <ScalarProperty Name="IdSolicitud" ColumnName="IdSolicitud" />
+          <ScalarProperty Name="IdPersona" ColumnName="IdPersona" />
+          <ScalarProperty Name="IdRelacion" ColumnName="IdRelacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblProyecto">
+      <EntityTypeMapping TypeName="Model.tblProyecto">
+        <MappingFragment StoreEntitySet="tblProyecto">
+          <ScalarProperty Name="IdProyecto" ColumnName="IdProyecto" />
+          <ScalarProperty Name="nomProyecto" ColumnName="nomProyecto" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="montoDesayuno" ColumnName="montoDesayuno" />
+          <ScalarProperty Name="montoComida" ColumnName="montoComida" />
+          <ScalarProperty Name="montoCena" ColumnName="montoCena" />
+          <ScalarProperty Name="nombreGerente" ColumnName="nombreGerente" />
+          <ScalarProperty Name="nombreJefe" ColumnName="nombreJefe" />
+          <ScalarProperty Name="nombreConta" ColumnName="nombreConta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblSolicitudV">
+      <EntityTypeMapping TypeName="Model.tblSolicitudV">
+        <MappingFragment StoreEntitySet="tblSolicitudV">
+          <ScalarProperty Name="IdSolicitud" ColumnName="IdSolicitud" />
+          <ScalarProperty Name="IdEmpleado" ColumnName="IdEmpleado" />
+          <ScalarProperty Name="IdProyecto" ColumnName="IdProyecto" />
+          <ScalarProperty Name="fechaSolicitud" ColumnName="fechaSolicitud" />
+          <ScalarProperty Name="destino" ColumnName="destino" />
+          <ScalarProperty Name="fechaSalida" ColumnName="fechaSalida" />
+          <ScalarProperty Name="fechaRegreso" ColumnName="fechaRegreso" />
+          <ScalarProperty Name="horaSalida" ColumnName="horaSalida" />
+          <ScalarProperty Name="horaRegreso" ColumnName="horaRegreso" />
+          <ScalarProperty Name="monto" ColumnName="monto" />
+          <ScalarProperty Name="numCuenta" ColumnName="numCuenta" />
+          <ScalarProperty Name="cantLetra" ColumnName="cantLetra" />
+          <ScalarProperty Name="totalDias" ColumnName="totalDias" />
+          <ScalarProperty Name="totalGasto" ColumnName="totalGasto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblAlimentos">
+      <EntityTypeMapping TypeName="Model.tblAlimentos">
+        <MappingFragment StoreEntitySet="tblAlimentos">
+          <ScalarProperty Name="IdSolicitud" ColumnName="IdSolicitud" />
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+          <ScalarProperty Name="concepto" ColumnName="concepto" />
+          <ScalarProperty Name="total" ColumnName="total" />
+          <ScalarProperty Name="numComida" ColumnName="numComida" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblComprobacionGastos">
+      <EntityTypeMapping TypeName="Model.tblComprobacionGastos">
+        <MappingFragment StoreEntitySet="tblComprobacionGastos">
+          <ScalarProperty Name="IdComprobacion" ColumnName="IdComprobacion" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="tarifa" ColumnName="tarifa" />
+          <ScalarProperty Name="hospedaje" ColumnName="hospedaje" />
+          <ScalarProperty Name="alimentacion" ColumnName="alimentacion" />
+          <ScalarProperty Name="gasolina" ColumnName="gasolina" />
+          <ScalarProperty Name="taxi" ColumnName="taxi" />
+          <ScalarProperty Name="caseta" ColumnName="caseta" />
+          <ScalarProperty Name="tel" ColumnName="tel" />
+          <ScalarProperty Name="estacionamiento" ColumnName="estacionamiento" />
+          <ScalarProperty Name="internet" ColumnName="internet" />
+          <ScalarProperty Name="paquetEnvio" ColumnName="paquetEnvio" />
+          <ScalarProperty Name="comidaNeg" ColumnName="comidaNeg" />
+          <ScalarProperty Name="otros" ColumnName="otros" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblConceptosDesc">
+      <EntityTypeMapping TypeName="Model.tblConceptosDesc">
+        <MappingFragment StoreEntitySet="tblConceptosDesc">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblHospedaje">
+      <EntityTypeMapping TypeName="Model.tblHospedaje">
+        <MappingFragment StoreEntitySet="tblHospedaje">
+          <ScalarProperty Name="IdSolicitud" ColumnName="IdSolicitud" />
+          <ScalarProperty Name="concepto" ColumnName="concepto" />
+          <ScalarProperty Name="total" ColumnName="total" />
+          <ScalarProperty Name="numNoches" ColumnName="numNoches" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblOtrosGastos">
+      <EntityTypeMapping TypeName="Model.tblOtrosGastos">
+        <MappingFragment StoreEntitySet="tblOtrosGastos">
+          <ScalarProperty Name="IdSolicitud" ColumnName="IdSolicitud" />
+          <ScalarProperty Name="concepto" ColumnName="concepto" />
+          <ScalarProperty Name="numFrecuencia" ColumnName="numFrecuencia" />
+          <ScalarProperty Name="total" ColumnName="total" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblRelacionGastos">
+      <EntityTypeMapping TypeName="Model.tblRelacionGastos">
+        <MappingFragment StoreEntitySet="tblRelacionGastos">
+          <ScalarProperty Name="IdGastosSinComprobar" ColumnName="IdGastosSinComprobar" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="concepto" ColumnName="concepto" />
+          <ScalarProperty Name="importe" ColumnName="importe" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTotalDiario">
+      <EntityTypeMapping TypeName="Model.tblTotalDiario">
+        <MappingFragment StoreEntitySet="tblTotalDiario">
+          <ScalarProperty Name="IdComprobacion" ColumnName="IdComprobacion" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="concepto" ColumnName="concepto" />
+          <ScalarProperty Name="totalConceptoGen" ColumnName="totalConceptoGen" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTotalGastos">
+      <EntityTypeMapping TypeName="Model.tblTotalGastos">
+        <MappingFragment StoreEntitySet="tblTotalGastos">
+          <ScalarProperty Name="IdComprabacion" ColumnName="IdComprabacion" />
+          <ScalarProperty Name="boletos" ColumnName="boletos" />
+          <ScalarProperty Name="otrosGastos" ColumnName="otrosGastos" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="totalViaje" ColumnName="totalViaje" />
+          <ScalarProperty Name="totalSinComprobar" ColumnName="totalSinComprobar" />
+          <ScalarProperty Name="saldo" ColumnName="saldo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTransporte">
+      <EntityTypeMapping TypeName="Model.tblTransporte">
+        <MappingFragment StoreEntitySet="tblTransporte">
+          <ScalarProperty Name="IdSolicitud" ColumnName="IdSolicitud" />
+          <ScalarProperty Name="conceptoo" ColumnName="conceptoo" />
+          <ScalarProperty Name="total" ColumnName="total" />
+          <ScalarProperty Name="numTransporte" ColumnName="numTransporte" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f43ce7ef016c41e490170709d6121695" Name="Diagram1">
+        <EntityTypeShape EntityType="Model.sysdiagrams" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.tblComprobacion" Width="1.5" PointX="5.25" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.tblEmpleado" Width="1.5" PointX="0.75" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.tblGastosSinComprobar" Width="1.5" PointX="7.5" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.tblPersonasAsignadas" Width="1.5" PointX="3" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.tblPersonasSolicitud" Width="1.5" PointX="5.25" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.tblProyecto" Width="1.5" PointX="0.75" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.tblSolicitudV" Width="1.5" PointX="3" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.tblAlimentos" Width="1.5" PointX="5.25" PointY="19.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.tblComprobacionGastos" Width="1.5" PointX="7.5" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.tblConceptosDesc" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.tblHospedaje" Width="1.5" PointX="5.25" PointY="22" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.tblOtrosGastos" Width="1.5" PointX="5.25" PointY="24.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.tblRelacionGastos" Width="1.5" PointX="9.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.tblTotalDiario" Width="1.5" PointX="7.5" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.tblTotalGastos" Width="1.5" PointX="7.5" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.tblTransporte" Width="1.5" PointX="5.25" PointY="27" IsExpanded="true" />
+        <AssociationConnector Association="Model.FK_tblComprobacion_tblSolicitudV1" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_tblComprobacionGastos_tblComprobacion1" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_tblGastosSinComprobar_tblComprobacion" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_tblTotalDiario_tblComprobacion1" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_tblTotalGastos_tblComprobacion1" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_tblSolicitudV_tblEmpleado" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_tblRelacionGastos_tblGastosSinComprobar" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_tblPersonasAsignadas_tblProyecto" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_tblPersonasSolicitud_tblPersonasAsignadas" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_tblPersonasSolicitud_tblSolicitudV" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_tblAlimentos_tblSolicitudV" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_tblHospedaje_tblSolicitudV" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_tblOtrosGastos_tblSolicitudV" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_tblTransporte_tblSolicitudV" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
